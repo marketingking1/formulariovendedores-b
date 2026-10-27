@@ -1,0 +1,1247 @@
+/* ============================================================================
+   ESTILO DO FORMULÁRIO "VAGA DE VENDAS" — variante B
+   Cópia fiel da folha de estilo da variante A (assets/index-kv20261007b.css,
+   deploy dpl_FLfbJE8BuAWNs97WpTkPKXvdH6wC), apenas reformatada para leitura.
+   Nenhuma regra foi alterada. Os blocos comentados no fim (correção mobile de
+   31/07 e acessibilidade) fazem parte do original e precisam ficar.
+   ========================================================================== */
+
+.kf-form {
+  --red: #cc213a;
+  --red-2: #e2344c;
+  --red-dark: #a81b30;
+  --navy: #061f35;
+  --blue: #0057a5;
+  --blue-light: #6ec1e4;
+  --gold: #edc006;
+  --ink: #0f2236;
+  --body: #51627a;
+  --muted: #8a99ac;
+  --line: #e6ebf2;
+  --field: #f5f7fb;
+  --field-line: #dfe5ee;
+  --r-lg: 30px;
+  --r-md: 16px;
+  --r-pill: 9999px;
+  font-family: Poppins, sans-serif;
+  color: var(--ink);
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(90% 80% at 8% 6%, #cc213a1a, #cc213a00 46%),
+    radial-gradient(90% 80% at 96% 96%, #0057a51f, #0057a500 48%),
+    linear-gradient(165deg, #f5f8fc, #eaf0f7);
+}
+.kf-form * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.kf-form button {
+  font-family: inherit;
+}
+.kf-form .bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.kf-form .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.45;
+  animation: kffloat 18s ease-in-out infinite;
+}
+.kf-form .blob.b1 {
+  width: 480px;
+  height: 480px;
+  background: #e2344c4d;
+  top: -150px;
+  left: -110px;
+}
+.kf-form .blob.b2 {
+  width: 440px;
+  height: 440px;
+  background: #0057a538;
+  bottom: -170px;
+  right: -90px;
+  animation-delay: -6s;
+}
+.kf-form .blob.b3 {
+  width: 300px;
+  height: 300px;
+  background: #6ec1e433;
+  top: 42%;
+  left: 60%;
+  animation-delay: -10s;
+}
+@keyframes kffloat {
+  0%,
+  to {
+    transform: translate(0) scale(1);
+  }
+  33% {
+    transform: translate(36px, -26px) scale(1.07);
+  }
+  66% {
+    transform: translate(-26px, 22px) scale(0.95);
+  }
+}
+.kf-form .app {
+  position: relative;
+  z-index: 2;
+  width: min(1080px, 100%);
+  height: min(720px, 94dvh);
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow:
+    0 40px 110px -34px #061f354d,
+    0 8px 24px -12px #061f351f;
+  overflow: hidden;
+  animation: kfrise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes kfrise {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.kf-form .brand {
+  position: relative;
+  padding: 46px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(120% 90% at 0% 0%, #fff3, #fff0 45%),
+    linear-gradient(160deg, #e2344c, #cc213a 46%, #a81b30);
+}
+.kf-form .brand:after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -90px;
+  width: 360px;
+  height: 360px;
+  background: url(./simbolo-branco-DnTnb7Xu.png) center/contain no-repeat;
+  opacity: 0.07;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+.kf-form .brand .logo {
+  height: 46px;
+  width: auto;
+  align-self: flex-start;
+  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.18));
+}
+.kf-form .brand h1 {
+  margin-top: 32px;
+  font-size: 33px;
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.kf-form .brand h1 .hl {
+  color: #ffd7dd;
+}
+.kf-form .brand .lead {
+  margin-top: 14px;
+  font-size: 15.5px;
+  font-weight: 400;
+  color: #ffffffd9;
+  line-height: 1.5;
+  max-width: 330px;
+}
+.kf-form .steps {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  z-index: 1;
+}
+.kf-form .stp {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 0;
+  position: relative;
+}
+.kf-form .stp .dot {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  background: #ffffff29;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: 0.45s;
+}
+.kf-form .stp .dot svg {
+  width: 18px;
+  height: 18px;
+}
+.kf-form .stp .lbl {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffffc7;
+  transition: 0.45s;
+}
+.kf-form .stp .lbl small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff8c;
+}
+.kf-form .stp.active .dot {
+  background: #fff;
+  color: var(--red);
+  border-color: #fff;
+  box-shadow: 0 8px 20px -6px #00000059;
+  transform: scale(1.05);
+}
+.kf-form .stp.active .lbl {
+  color: #fff;
+}
+.kf-form .stp.done .dot {
+  background: #fffffff2;
+  color: var(--blue);
+  border-color: #fff;
+}
+.kf-form .stp.done .lbl {
+  color: #fff;
+}
+.kf-form .brand .spacer {
+  flex: 1;
+}
+.kf-form .proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  position: relative;
+  z-index: 1;
+  padding: 9px 16px;
+  border-radius: var(--r-pill);
+  background: #ffffff26;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.kf-form .proof .stars {
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.kf-form .form {
+  position: relative;
+  padding: 40px 54px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+.kf-form .fhead {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 34px;
+}
+.kf-form .back {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 4px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.kf-form .back:hover {
+  color: var(--blue);
+}
+.kf-form .back.show {
+  display: inline-flex;
+}
+.kf-form .progress {
+  flex: 1;
+  height: 7px;
+  border-radius: 9999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+.kf-form .progress i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--blue-light) 100%);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.kf-form .counter {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.kf-form .screens {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 0;
+}
+.kf-form .screen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition:
+    opacity 0.4s,
+    transform 0.4s;
+  overflow-y: auto;
+  padding: 4px 26px 44px;
+  margin: 0 -26px -44px;
+}
+.kf-form .screen.active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  position: relative;
+}
+.kf-form .qnum {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+.kf-form .qnum svg {
+  width: 17px;
+  height: 17px;
+}
+.kf-form .qtitle {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.kf-form .qhint {
+  font-size: 14.5px;
+  color: var(--body);
+  font-weight: 400;
+  margin-top: -4px;
+  line-height: 1.5;
+}
+.kf-form .field {
+  position: relative;
+  margin-top: 6px;
+}
+.kf-form .field input {
+  width: 100%;
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--field);
+  border: 1.5px solid var(--field-line);
+  border-radius: var(--r-md);
+  padding: 21px 20px;
+  outline: none;
+  transition: 0.22s;
+}
+.kf-form .field input::placeholder {
+  color: #a7b3c2;
+  font-weight: 400;
+}
+.kf-form .field input:focus {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow:
+    0 0 0 4px #0057a521,
+    0 8px 24px -14px #0057a56b;
+}
+.kf-form .field.age input {
+  max-width: 200px;
+  text-align: center;
+}
+.kf-form .phone {
+  display: flex;
+  gap: 12px;
+}
+.kf-form .phone .ddd {
+  width: 120px;
+  flex: none;
+  text-align: center;
+}
+.kf-form .phone .num {
+  flex: 1;
+}
+.kf-form .field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 16.5px;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--field);
+  border: 1.5px solid var(--field-line);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  outline: none;
+  transition: 0.22s;
+  resize: none;
+  min-height: 138px;
+  line-height: 1.55;
+}
+.kf-form .field textarea::placeholder {
+  color: #a7b3c2;
+  font-weight: 400;
+}
+.kf-form .field textarea:focus {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow:
+    0 0 0 4px #0057a521,
+    0 8px 24px -14px #0057a56b;
+}
+.kf-form .choices {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 4px;
+}
+.kf-form .choice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  background: var(--field);
+  border: 1.5px solid var(--field-line);
+  border-radius: var(--r-md);
+  padding: 17px 20px;
+  transition: 0.18s;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+}
+.kf-form .choice:hover {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 8px 24px -16px #0057a573;
+}
+.kf-form .choice .mark {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--field-line);
+  display: grid;
+  place-items: center;
+  transition: 0.18s;
+}
+.kf-form .choice .mark svg {
+  width: 13px;
+  height: 13px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.18s;
+}
+.kf-form .choice.sel {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 0 0 3px #0057a51f;
+}
+.kf-form .choice.sel .mark {
+  border-color: var(--blue);
+  background: var(--blue);
+}
+.kf-form .choice.sel .mark svg {
+  opacity: 1;
+  transform: none;
+}
+.kf-form .upload {
+  margin-top: 6px;
+}
+.kf-form .upload input[type="file"] {
+  display: none;
+}
+.kf-form .uplabel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  background: var(--field);
+  border: 1.6px dashed var(--field-line);
+  border-radius: var(--r-md);
+  padding: 24px 22px;
+  transition: 0.18s;
+}
+.kf-form .uplabel:hover {
+  border-color: var(--blue);
+  background: #fff;
+}
+.kf-form .uplabel .upic {
+  flex: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: #0057a514;
+  border: 1px solid rgba(0, 87, 165, 0.18);
+  transition: 0.18s;
+}
+.kf-form .uplabel .upic svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--blue);
+  fill: none;
+}
+.kf-form .uplabel .uptxt {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.kf-form .uplabel .uptxt small {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.kf-form .uplabel.has {
+  border-style: solid;
+  border-color: #1aa356;
+  background: #f1fbf5;
+}
+.kf-form .uplabel.has .upic {
+  background: #1aa3561a;
+  border-color: #1aa35640;
+}
+.kf-form .uplabel.has .upic svg {
+  stroke: #1aa356;
+}
+.kf-form .err {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--red);
+  min-height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: 0.25s;
+}
+.kf-form .err.show {
+  opacity: 1;
+  transform: none;
+}
+.kf-form .err svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+.kf-form .btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  padding: 18px 34px;
+  border-radius: var(--r-pill);
+  background: linear-gradient(135deg, var(--red-2) 0%, var(--red-dark) 100%);
+  box-shadow: inset 0 1px #ffffff40;
+  transition:
+    transform 0.18s,
+    filter 0.2s;
+  margin-top: 4px;
+}
+.kf-form .btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+.kf-form .btn:active {
+  transform: translateY(0);
+}
+.kf-form .btn .arrow {
+  display: inline-flex;
+  transition: transform 0.25s;
+}
+.kf-form .btn:hover .arrow {
+  transform: translate(4px);
+}
+.kf-form .btn svg {
+  width: 20px;
+  height: 20px;
+}
+.kf-form .enterhint {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.kf-form .enterhint kbd {
+  font-family: inherit;
+  font-size: 11px;
+  background: #f1f4f8;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 600;
+  color: var(--body);
+}
+.kf-form .intro-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 2px;
+}
+.kf-form .intro-list .it {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.kf-form .intro-list .it > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.kf-form .intro-list .it .ic {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #0057a512;
+  border: 1px solid rgba(0, 87, 165, 0.16);
+}
+.kf-form .intro-list .it .ic svg {
+  width: 21px;
+  height: 21px;
+  stroke: var(--blue);
+  fill: none;
+}
+.kf-form .intro-list .it small {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.kf-form .badge-fast {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 15px;
+  border-radius: var(--r-pill);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--red);
+  background: #cc213a14;
+  border: 1px solid rgba(204, 33, 58, 0.22);
+}
+.kf-form .badge-fast .pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2ecc71;
+  box-shadow: 0 0 #2ecc718c;
+  animation: kfpulse 1.8s infinite;
+}
+@keyframes kfpulse {
+  0% {
+    box-shadow: 0 0 #2ecc718c;
+  }
+  70% {
+    box-shadow: 0 0 0 9px #2ecc7100;
+  }
+  to {
+    box-shadow: 0 0 #2ecc7100;
+  }
+}
+.kf-form .screen.success {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+}
+.kf-form .checkmark {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #2ecc71, #1aa356);
+  box-shadow: 0 16px 42px -12px #1aa35699;
+  animation: kfpop 0.6s cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+.kf-form .checkmark svg {
+  width: 46px;
+  height: 46px;
+}
+@keyframes kfpop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.kf-form .success h2 {
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.kf-form .success p {
+  font-size: 15px;
+  color: var(--body);
+  max-width: 420px;
+  line-height: 1.6;
+}
+.kf-form .success .nextbox {
+  display: flex;
+  gap: 13px;
+  text-align: left;
+  max-width: 440px;
+  margin-top: 24px;
+  background: #f3f8ff;
+  border: 1px solid rgba(0, 87, 165, 0.18);
+  border-left: 4px solid var(--blue);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.kf-form .success .nextbox svg {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  margin-top: 1px;
+  stroke: var(--blue);
+  fill: none;
+}
+.kf-form .success .nextbox p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #2d4a66;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+}
+.kf-form .success .nextbox p b {
+  color: var(--blue);
+  font-weight: 700;
+}
+@media (max-width: 860px) {
+  .kf-form {
+    padding: 0;
+    overflow: visible;
+    align-items: stretch;
+  }
+  .kf-form .app {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100dvh;
+    border-radius: 0;
+  }
+  .kf-form .brand {
+    padding: 30px 26px 28px;
+  }
+  .kf-form .brand:after {
+    width: 230px;
+    height: 230px;
+    right: -60px;
+    bottom: -60px;
+  }
+  .kf-form .brand h1 {
+    font-size: 26px;
+    margin-top: 22px;
+  }
+  .kf-form .brand .lead {
+    font-size: 14px;
+  }
+  .kf-form .steps,
+  .kf-form .brand .spacer {
+    display: none;
+  }
+  .kf-form .proof {
+    margin-top: 20px;
+  }
+  .kf-form .form {
+    padding: 30px 26px 44px;
+  }
+  .kf-form .qtitle {
+    font-size: 23px;
+  }
+  .kf-form .field input {
+    font-size: 18px;
+    padding: 18px 16px;
+  }
+  .kf-form .screens {
+    min-height: 360px;
+  }
+  .kf-form .screen {
+    position: relative;
+    overflow: visible;
+  }
+}
+@media (max-width: 380px) {
+  .kf-form .phone {
+    flex-direction: column;
+  }
+  .kf-form .phone .ddd {
+    width: 100%;
+  }
+}
+
+/* ============================================================================
+   MOBILE HOTFIX + REFINO — 2026-07-31
+   ----------------------------------------------------------------------------
+   BUG RAIZ: `.screens` e um flex container com direction:row (default). O bloco
+   @media(max-width:860px) original declarava `.kf-form .screen{position:relative}`
+   para TODA tela, e nao so para a ativa. Resultado: as 11 telas do formulario
+   viravam itens flex lado a lado numa unica linha de ~2050px dentro de um
+   container de 374px. Cada tela era espremida para ~230px e as ultimas ficavam
+   completamente fora da viewport, recortadas por `.app{overflow:hidden}`.
+   Nas telas de multipla escolha (disponibilidade / MEI / computador) e na de
+   curriculo nao ha input para o autofocus puxar via scroll-into-view, entao o
+   candidato via TELA BRANCA. Correcao: tirar as telas inativas do fluxo.
+   Tudo abaixo e aditivo — nenhuma regra anterior foi removida ou editada.
+   ========================================================================== */
+
+body {
+  margin: 0;
+}
+
+/* `.kf-form *{box-sizing:border-box}` nao alcanca o proprio `.kf-form` (o
+   combinador e descendente). Sem isso, min-height:100dvh + padding:28px somam
+   956px num monitor de 900 e o desktop ganha uma barra de rolagem fantasma. */
+.kf-form {
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  /* --- 1. correcao estrutural: uma tela por vez, ocupando a largura toda --- */
+  .kf-form .screens {
+    display: block;
+    min-height: 0;
+    overflow: visible;
+  }
+  .kf-form .screen {
+    position: absolute;
+    overflow: visible;
+  }
+  .kf-form .screen.active {
+    position: relative;
+  }
+
+  /* --- 2. os blobs desfocados ficam 100% atras do `.app` opaco no mobile.
+           invisiveis, mas 3x blur(90px) custam GPU em Android de entrada. --- */
+  .kf-form .bg {
+    display: none;
+  }
+
+  /* --- 3. respiro real de borda + safe-area (o HTML usa viewport-fit=cover) - */
+  /* `align-content` normal num grid de linhas `auto` distribui a folga vertical
+     entre as linhas — era isso que inflava a faixa vermelha com espaco morto.
+     Marca = altura de conteudo; formulario = todo o resto.                    */
+  .kf-form .app {
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr;
+    align-content: start;
+  }
+  .kf-form .brand {
+    padding: calc(28px + env(safe-area-inset-top))
+      max(22px, env(safe-area-inset-right)) 26px
+      max(22px, env(safe-area-inset-left));
+  }
+  .kf-form .form {
+    padding: 26px max(22px, env(safe-area-inset-right))
+      calc(40px + env(safe-area-inset-bottom))
+      max(22px, env(safe-area-inset-left));
+  }
+
+  /* --- 4. tipografia que respira a largura real do aparelho ---------------- */
+  .kf-form .brand h1 {
+    font-size: clamp(23px, 6.6vw, 30px);
+    margin-top: 20px;
+  }
+  .kf-form .brand .lead {
+    font-size: 14.5px;
+    max-width: none;
+  }
+  .kf-form .qtitle {
+    font-size: clamp(21px, 5.9vw, 26px);
+  }
+  .kf-form .qhint {
+    font-size: 14.5px;
+  }
+
+  /* --- 5. barra de progresso: cabe em 360px sem empurrar o contador ------- */
+  .kf-form .fhead {
+    gap: 12px;
+  }
+  .kf-form .counter {
+    font-size: 12px;
+  }
+  .kf-form .back {
+    font-size: 13px;
+    padding: 6px 2px;
+  }
+
+  /* --- 6. alvos de toque: CTA de largura total, opcoes com altura de dedo -- */
+  .kf-form .btn {
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+    min-height: 58px;
+    padding: 18px 26px;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  .kf-form .choice {
+    min-height: 60px;
+    padding: 16px 18px;
+  }
+  .kf-form .uplabel {
+    padding: 20px 18px;
+  }
+  .kf-form .field input {
+    font-size: 18px;
+    padding: 18px 16px;
+  }
+
+  /* --- 7. dica de teclado fisico nao faz sentido no celular --------------- */
+  .kf-form .enterhint {
+    display: none;
+  }
+}
+
+/* --- 8. no touch, :hover "gruda" depois do tap. neutraliza. --------------- */
+@media (hover: none) {
+  .kf-form .btn:hover {
+    transform: none;
+    filter: none;
+  }
+  .kf-form .btn:hover .arrow {
+    transform: none;
+  }
+  .kf-form .choice:hover {
+    border-color: var(--field-line);
+    background: var(--field);
+    box-shadow: none;
+  }
+  .kf-form .choice.sel:hover {
+    border-color: var(--blue);
+    background: #fff;
+  }
+  .kf-form .uplabel:hover {
+    border-color: var(--field-line);
+    background: var(--field);
+  }
+  .kf-form .uplabel.has:hover {
+    border-color: #1aa356;
+    background: #f1fbf5;
+  }
+}
+
+/* --- 9. DDD e numero continuam lado a lado ate 320px (empilhar desperdica
+         uma linha inteira de altura, que e o recurso escasso aqui). -------- */
+@media (max-width: 380px) {
+  .kf-form .phone {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .kf-form .phone .ddd {
+    width: 84px;
+  }
+  .kf-form .brand,
+  .kf-form .form {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* --- 10. o pitch de marca completo so na tela de abertura. Nas perguntas ele
+          vira uma faixa fina: devolve ~200px de altura, o que decide se o
+          candidato ve o botao sem rolar num aparelho de 667px. ------------- */
+@supports selector(:has(*)) {
+  @media (max-width: 860px) {
+    .kf-form:not(:has(.screens > .screen:first-child.active)) .brand {
+      flex-direction: row;
+      align-items: center;
+      padding: calc(13px + env(safe-area-inset-top))
+        max(22px, env(safe-area-inset-right)) 13px
+        max(22px, env(safe-area-inset-left));
+    }
+    .kf-form:not(:has(.screens > .screen:first-child.active)) .brand h1,
+    .kf-form:not(:has(.screens > .screen:first-child.active)) .brand .lead,
+    .kf-form:not(:has(.screens > .screen:first-child.active)) .proof {
+      display: none;
+    }
+    .kf-form:not(:has(.screens > .screen:first-child.active)) .brand .logo {
+      height: 32px;
+    }
+    .kf-form:not(:has(.screens > .screen:first-child.active)) .brand:after {
+      width: 132px;
+      height: 132px;
+      right: -34px;
+      bottom: -46px;
+    }
+  }
+  /* celular deitado: altura e o recurso critico, faixa fina sempre */
+  @media (max-width: 940px) and (max-height: 520px) {
+    .kf-form .brand h1,
+    .kf-form .brand .lead,
+    .kf-form .proof {
+      display: none;
+    }
+    .kf-form .brand {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .kf-form .brand .logo {
+      height: 30px;
+    }
+  }
+}
+
+/* --- 11. aparelhos baixos (SE, Androids de 640px, tela deitada): altura e o
+         recurso escasso. Compacta o ritmo vertical para o CTA caber na dobra
+         sem encolher alvo de toque abaixo de ~50px nem fonte de input abaixo
+         de 16px (menos que isso o iOS da zoom automatico no foco). --------- */
+@media (max-width: 860px) and (max-height: 700px) {
+  .kf-form .screen {
+    gap: 12px;
+  }
+  .kf-form .form {
+    padding-top: 18px;
+  }
+  .kf-form .qtitle {
+    font-size: clamp(19px, 5.4vw, 23px);
+  }
+  .kf-form .qhint {
+    font-size: 13.5px;
+  }
+  .kf-form .badge-fast {
+    font-size: 11.5px;
+    padding: 6px 12px;
+  }
+  .kf-form .choice {
+    min-height: 54px;
+    padding: 14px 16px;
+    font-size: 15.5px;
+  }
+  .kf-form .choice .mark {
+    width: 22px;
+    height: 22px;
+  }
+  .kf-form .btn {
+    min-height: 54px;
+    padding: 15px 22px;
+    margin-top: 6px;
+  }
+  .kf-form .field input {
+    padding: 15px 14px;
+  }
+  .kf-form .field textarea {
+    min-height: 104px;
+    padding: 14px 16px;
+  }
+  .kf-form .uplabel {
+    padding: 15px 14px;
+  }
+  .kf-form .uplabel .upic {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+  .kf-form .intro-list {
+    gap: 9px;
+  }
+  .kf-form .intro-list .it {
+    font-size: 14.5px;
+  }
+  .kf-form .intro-list .it .ic {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+  }
+  .kf-form .brand h1 {
+    font-size: clamp(20px, 5.6vw, 25px);
+    margin-top: 14px;
+  }
+  .kf-form .brand .lead {
+    font-size: 13.5px;
+    margin-top: 10px;
+  }
+  .kf-form .brand {
+    padding-bottom: 20px;
+  }
+  .kf-form .proof {
+    margin-top: 14px;
+    padding: 7px 13px;
+    font-size: 12px;
+  }
+}
+
+/* ============================================================================
+   PASSADA 2 — acessibilidade (2026-07-31)
+   Auditoria da pagina viva: contraste medido, foco, teclado e movimento.
+   Nada aqui e cosmetico: sao 4 falhas WCAG reais encontradas por medicao.
+   ========================================================================== */
+
+/* --- 12. CONTRASTE (WCAG 1.4.3 AA) --------------------------------------- */
+/* `--muted` media 2,90:1 no branco e 2,71:1 no `--field` — reprovado para
+   "Pergunta X de 9", "Voltar", "ou arraste seu curriculo aqui" e os `small`
+   da lista de etapas. Novo valor: 5,43:1 no branco / 5,07:1 no field.
+   Placeholder media 1,98:1; vai a 4,67:1 e continua mais claro que o texto
+   digitado (`--ink`, peso 500) para nao parecer campo ja preenchido.
+   O branco sobre vermelho da marca ja passava (5,46:1) e nao foi tocado.     */
+.kf-form {
+  --muted: #5c6b7f;
+}
+.kf-form .field input::placeholder,
+.kf-form .field textarea::placeholder {
+  color: #647084;
+}
+
+/* --- 13. FOCO VISIVEL (WCAG 2.4.7) --------------------------------------- */
+/* A folha inteira tinha 2 regras de foco, so nos campos de texto. Botao,
+   opcao de multipla escolha, voltar e upload nao davam nenhum sinal.
+   `:focus-visible` = so no teclado, nao suja o toque/mouse.                  */
+.kf-form .btn:focus-visible,
+.kf-form .choice:focus-visible,
+.kf-form .back:focus-visible,
+.kf-form .upload input[type="file"]:focus-visible + .uplabel {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+.kf-form .upload input[type="file"]:focus-visible + .uplabel {
+  border-color: var(--blue);
+  background: #fff;
+}
+
+/* --- 14. TECLADO (WCAG 2.1.1, nivel A) ----------------------------------- */
+/* O input de arquivo era `display:none` — fora da ordem de tabulacao. Um
+   candidato navegando por teclado NAO conseguia anexar o curriculo, ou seja,
+   nao conseguia enviar a candidatura. Passa a ser visualmente oculto mas
+   focavel. O `<label for="i-cv">` e irmao e continua acionando por clique.   */
+.kf-form .upload {
+  position: relative;
+}
+.kf-form .upload input[type="file"] {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+/* --- 15. MOVIMENTO (WCAG 2.3.3) ------------------------------------------ */
+/* Havia 4 animacoes ativas e nenhuma regra prefers-reduced-motion.           */
+@media (prefers-reduced-motion: reduce) {
+  .kf-form *,
+  .kf-form *::before,
+  .kf-form *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+  .kf-form .blob {
+    animation: none !important;
+  }
+  .kf-form .badge-fast .pulse {
+    animation: none !important;
+  }
+}
+
+/* --- 16. ALVO DE TOQUE DO "VOLTAR" (WCAG 2.5.5) -------------------------- */
+/* Media 51x32px. A faixa de marca compacta liberou altura de sobra p/ 44px.  */
+@media (max-width: 860px) {
+  .kf-form .fhead {
+    height: 44px;
+  }
+  .kf-form .back {
+    min-height: 44px;
+    padding: 6px 10px;
+    margin-left: -10px;
+  }
+}
+.kf-form .qtitle .kw {
+  color: var(--red);
+  font-weight: 800;
+}
+.kf-form .qhint .kw {
+  color: var(--red);
+  font-weight: 700;
+}
+.kf-form .kv-count {
+  font-size: 12.5px;
+  color: var(--muted);
+  text-align: right;
+  margin-top: -4px;
+}
+.kf-form .kv-count.max {
+  color: var(--red);
+  font-weight: 600;
+}

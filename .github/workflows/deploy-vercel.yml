@@ -1,0 +1,22 @@
+# Publica a página na Vercel a cada push na main.
+# Por quê: a conta da Vercel é Hobby (sem membros no time), então o deploy automático
+# do Git fica BLOCKED quando o commit é de quem não é o dono. O Deploy Hook só consegue
+# republicar ESTE projeto (formulariovendedores-b) — não dá acesso a mais nada da conta.
+name: Deploy Vercel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispara o Deploy Hook da Vercel
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          test -n "$HOOK" || { echo "secret VERCEL_DEPLOY_HOOK_URL ausente"; exit 1; }
+          curl -fsS -X POST "$HOOK" -o /dev/null
+          echo "Deploy disparado. Confira em ~1 min: site.kingoflanguages.com.br/vendedores-b/"

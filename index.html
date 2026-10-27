@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Vaga de Vendas — King of Languages</title>
+    <meta name="description" content="Formulário de candidatura para a vaga de vendas da King of Languages." />
+    <meta name="author" content="King of Languages" />
+
+    <meta property="og:title" content="Vaga de Vendas — King of Languages" />
+    <meta property="og:description" content="Formulário de candidatura para a vaga de vendas da King of Languages." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://site.kingoflanguages.com.br/vendedores/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Vaga de Vendas — King of Languages" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vaga de Vendas — King of Languages" />
+    <meta name="twitter:description" content="Formulário de candidatura para a vaga de vendas da King of Languages." />
+    <meta name="twitter:image" content="https://site.kingoflanguages.com.br/vendedores/og-image.png" />
+
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '760887529692872');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- As perguntas e os textos do formulário ficam em assets/form.js -->
+    <script src="assets/form.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="kf-form">
+        <div class="bg"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+        <main class="app">
+          <!-- ===== FAIXA VERMELHA (esquerda no computador, topo no celular) =====
+               Pode editar os textos abaixo. As 4 etapas: o texto principal vem
+               antes do <small>, o subtítulo fica dentro do <small>. -->
+          <aside class="brand">
+            <img class="logo" src="assets/logo-branco.png" alt="King of Languages" />
+            <h1>Faça parte do <span class="hl">time King</span> de vendas</h1>
+            <p class="lead">Processo seletivo 100% online para o nosso time comercial. Rápido e direto ao ponto.</p>
+            <div class="steps">
+              <div class="stp active"><span class="dot">1</span><span class="lbl">Formulário<small>alguns minutos</small></span></div>
+              <div class="stp"><span class="dot">2</span><span class="lbl">Análise do perfil<small>nosso time avalia</small></span></div>
+              <div class="stp"><span class="dot">3</span><span class="lbl">Vídeo curto<small>gravado no celular</small></span></div>
+              <div class="stp"><span class="dot">4</span><span class="lbl">Entrevista<small>com o time comercial</small></span></div>
+            </div>
+            <div class="spacer"></div>
+            <div class="proof">+9 mil alunos ativos</div>
+          </aside>
+          <!-- ===== FIM DA FAIXA VERMELHA ===== -->
+
+          <section class="form">
+            <div class="fhead">
+              <button class="back" type="button" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Voltar</button>
+              <div class="progress"><i style="width: 5%"></i></div>
+              <span class="counter">Vamos começar</span>
+            </div>
+            <!-- As telas são montadas por assets/form.js -->
+            <div class="screens"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
